@@ -7,6 +7,21 @@
 	<script src=controller.js></script>
 </head>
 <body ng-controller="FirstController"> <!-- ng-controller matchea con el nombre del controlador que creamos-->
+	<input type="text" ng-model="nombre"></input>
 	{{"hola " + nombre}}
+	<br>
+	<h4>Agregar Comentarios</h4>
+	<input type="text" ng-model="nuevoComentario.comentario"/>
+	<br>
+	<input type="text" ng-model="nuevoComentario.usuario"/>
+	<br>
+	<button ng-click="agregarComentario()">Agregar Comentario</button>
+	<h3>Comentarios</h3>
+	<ul>
+		<li ng-repeat="comentario in comentarios"> <!-- Directiva de angular para foreach -->
+			{{comentario.comentario}} - <strong>{{comentario.usuario}}</strong>			
+
+		</li>			
+	</ul>
 </body>
 </html>
