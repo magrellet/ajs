@@ -7,11 +7,14 @@
 	<script src=controller.js></script>
 </head>
 <body ng-controller="FirstController"> <!-- ng-controller matchea con el nombre del controlador que creamos-->
+	<input type="" ng-model="newPost.title"></input><!--ng model es como el value para angular -->
+	<br>
+	<textarea ng-model="newPost.body"></textarea>
+	<button ng-click="addPost()">Enviar</button>
 	<ul>
 		<li ng-repeat="post in posts">
-			{{post.tittle}}
-			{{post.body}}
+			<h3>{{post.title}} </h3>
+			<p>{{post.body}}</p>
 	</ul>
-
 </body>
 </html>
