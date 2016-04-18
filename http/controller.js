@@ -18,7 +18,7 @@ angular.module("MyFirstApp",[])
 			.success(function(data, status, header, config){
 				$scope.posts.push($scope.newPost);
 				console.log($scope.posts);
-				//$scope.posts = {};
+				//$scope.newPost = {};
 			})
 			.error(function(data, status, header, config){
 				alert("error");
